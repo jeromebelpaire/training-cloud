@@ -1,0 +1,7 @@
+pandas==0.25.2
+spacy==2.2.3
+nltk==3.4.5
+sklearn==0.0
+textblob==0.15.3
+
+
