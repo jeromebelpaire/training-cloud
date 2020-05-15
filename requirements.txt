@@ -3,5 +3,5 @@ spacy==2.2.3
 nltk==3.4.5
 sklearn==0.0
 textblob==0.15.3
-
+Flask==1.1.2
 
