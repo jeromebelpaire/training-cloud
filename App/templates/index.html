@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authore detector</title>
+    <title>Author detector</title>
 </head>
 
 <body>
-    <h1>Hello World</h1>
-    <p>The author is {{ prediction }}</p>
+    <h1>Author predictor</h1>
+    <form method="POST" autocomplete="off">
+        <input type="text" name="input_text">
+        <button>Detect Author</button>
+    </form>
+    <p>The author for '{{ input_text }}' is {{ prediction }}</p>
 </body>
 
 </html>
