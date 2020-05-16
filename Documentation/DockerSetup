@@ -1,0 +1,20 @@
+#For local run
+First install Docker toolbox if on Windows Home
+Run: docker-machine start default
+Check with: docker-machine ls
+
+Useful commands:
+- docker-machine ls
+- docker ps
+- docker ps -a
+- docker stop <container name>
+- docker rm <container name>
+- docker images
+- docker rmi <image name>
+- docker run -p 80:5555 <image name>
+- docker system prune
+
+- docker run -d <image name> : run in background
+- docker attach <id>
+
+-docker history <image name>
