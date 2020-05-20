@@ -17,4 +17,10 @@ Useful commands:
 - docker run -d <image name> : run in background
 - docker attach <id>
 
--docker history <image name>
+- docker history <image name>
+
+#To publish 
+docker login #Make sure you have an account
+
+docker tag friendlyhello [your-dockerhub-user]/[repo]:[version]
+docker push [your-dockerhub-user]/[repo]:[version] #Takes quite a bit of time
