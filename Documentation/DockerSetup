@@ -22,5 +22,8 @@ Useful commands:
 #To publish 
 docker login #Make sure you have an account
 
-docker tag friendlyhello [your-dockerhub-user]/[repo]:[version]
+docker tag [your-image]:[version] [your-dockerhub-user]/[repo]:[version]
 docker push [your-dockerhub-user]/[repo]:[version] #Takes quite a bit of time
+
+#Deploy on azure
+host for private docker repo: index.docker.io

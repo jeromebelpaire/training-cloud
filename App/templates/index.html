@@ -3,16 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/main.css">
     <title>Author detector</title>
 </head>
 
 <body>
-    <h1>Author predictor</h1>
-    <form method="POST" autocomplete="off">
-        <input type="text" name="input_text">
-        <button>Detect Author</button>
-    </form>
-    <p>The author for '{{ input_text }}' is {{ prediction }}</p>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-brown fixed-top">
+            <div class="container">
+                <a class="navbar-brand mr-4" href="/">Author detector</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                    <div class="navbar-nav mr-auto">
+                        <a class="nav-item nav-link" href="/">Home</a>
+                        <!-- <a class="nav-item nav-link" href="/about">About</a> -->
+                    </div>
+                    <!-- Navbar Right Side -->
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container container-small">
+        <div>
+            <h1>Predict the author of a text</h1>
+            <p>Type some text below and find out which of the following authors it ressembles most</p>
+            <ul>
+                <li>MWS: Mary Shelley</li>
+                <li>EAP: Edgar Allan Poe</li>
+                <li>HPL: HP Lovecraft</li>
+            </ul>
+            <form method="POST" autocomplete="off">
+                <input type="text" name="input_text">
+                <button>Detect Author</button>
+            </form>
+            <p>The author is: <strong>{{ prediction }}</strong></p>
+            <p>For this given text: '{{ input_text }}'</p>
+        </div>
+    </main>
+
 </body>
 
 </html>
