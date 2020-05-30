@@ -1,0 +1,1 @@
+az acr create --name trainingcloudACR --resource-group Jerome --sku Basic --admin-enabled true

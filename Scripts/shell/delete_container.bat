@@ -1,0 +1,1 @@
+az container delete --resource-group Jerome --name training-cloud

@@ -1,0 +1,1 @@
+az acr repository delete -n trainingcloudACR --repository training_cloud

@@ -1,0 +1,1 @@
+az container create --resource-group Jerome --name training-cloud --image trainingcloudACR.azurecr.io/training_cloud:1.0 --ports 80 --ip-address Public

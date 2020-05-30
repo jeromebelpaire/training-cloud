@@ -1,0 +1,1 @@
+docker login trainingcloudACR.azurecr.io --username trainingcloudACR

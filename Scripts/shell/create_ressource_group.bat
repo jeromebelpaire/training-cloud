@@ -1,0 +1,1 @@
+az group create --name Jerome --location "West Europe"

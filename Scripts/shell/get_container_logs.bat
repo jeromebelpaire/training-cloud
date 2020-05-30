@@ -1,0 +1,1 @@
+az container logs --resource-group Jerome --name training-cloud
