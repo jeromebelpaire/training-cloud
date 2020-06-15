@@ -1,0 +1,1 @@
+az container show --resource-group Jerome --name training-cloud --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table

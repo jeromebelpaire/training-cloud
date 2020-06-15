@@ -1,0 +1,1 @@
+docker build --tag training_cloud:1.0 .
