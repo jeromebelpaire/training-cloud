@@ -1,1 +1,1 @@
-az acr repository delete -n MyRegistry --repository hello-world
+docker push trainingcloudACR.azurecr.io/training_cloud:1.0
