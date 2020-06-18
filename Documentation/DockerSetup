@@ -7,7 +7,7 @@ Check with: docker-machine ls
 docker build -t training_cloud:1.0 .
 
 #To run locally
-docker run -p 80:5555 training_cloud:1.0
+docker run -p 5555:80 training_cloud:1.0
 
 #To publish 
 docker login #Make sure you have an account
