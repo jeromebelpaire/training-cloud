@@ -72,7 +72,7 @@ The following setup starts from scratch, you might want to skip steps:
 
     The output reveals two passwords along with the user name, both passwords can be used.
 
-15. Login in azure container registry:
+15. Login in azure container registry (docker needs to be running for this):
 
     `docker login trainingcloudACR.azurecr.io --username trainingcloudACR`
 
@@ -86,27 +86,31 @@ The following setup starts from scratch, you might want to skip steps:
 
 ### Launch on Azure Container Instances
 
-18. Launch the container:
+18. Launch the container, change the DNS if you want:
 
-    `az container create --resource-group MyRessourceGroup --name training-cloud --image trainingcloudACR.azurecr.io/training_cloud:1.0 --ports 80 --ip-address Public`
+    `az container create --resource-group MyRessourceGroup --name training-cloud --image trainingcloudACR.azurecr.io/training_cloud:1.0 --ports 80 --ip-address Public --dns-name-label my-training-cloud-site`
 
     This will ask you the username and password from step 14.
 
     Within a few seconds, you should get a response from the Azure CLI indicating that the deployment has completed.
 
-19. Check the status and the ip-adress with:
+19. Check the status, dns and the ip-adress with:
 
-    `az container show --resource-group MyRessourceGroup --name training-cloud --query "{FQDN:ipAddress.ip,ProvisioningState:provisioningState}" --out table`
+    `az container show --resource-group MyRessourceGroup --name training-cloud --query "{FQDN:ipAddress.fqdn, IP:ipAddress.ip,ProvisioningState:provisioningState}" --out table`
 
 20. Try out the API through:
 
-    `<ip-adress from previous step>:80`
+    http://my-training-cloud-site.westeurope.azurecontainer.io/
 
 ### Clean up
 
 21. To clean up:
 
     `az group delete --name MyRessourceGroup`
+
+22. Stop docker-machine
+
+    `docker-machine stop default`
 
 ## Pro's and con's of Docker and Azure Container Services
 
